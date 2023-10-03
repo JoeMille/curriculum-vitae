@@ -49,47 +49,6 @@ body {
     background-color: #333;
 }
 
-/* Styling for the main content on Index page */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.card {
-    background-color: #4e4646;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    flex-basis: calc(50% - 10px);
-    margin-bottom: 20px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transition: all 1s;
-}
-
-@media (prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
-}
 /* Styling for graph container on Index page */
 
 .graph-container {
@@ -135,6 +94,50 @@ body {
     padding: 10px;
 
 }
+
+/* Styling for the main content on Index page */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px; /* add max-width to prevent the containers from stretching too far */
+    margin: 0 auto; /* center the container */
+  }
+  
+  .card {
+    background-color: #4e4646;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+    width: calc(50% - 10px); /* add width to make the container sit next to each other */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+  }
+  
+  @media (prefers-reduced-motion) {
+    .hidden {
+      transition: none;
+    }
+  }
 
 /* Styling for the images on lower Index page */
 .image-container {
