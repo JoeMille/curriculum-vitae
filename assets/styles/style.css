@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 body {
+    background-image: url(../images/cv-background-image2.png);
     background-color: #333;
     color: #ffffff;
     font-family: 'Bebas Neue', sans-serif;
@@ -11,12 +13,39 @@ body {
 
 #main-header {
     background-image: url(../images/cv-background-image.png);
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 30PX;
     background-color: #333;
     color: #fff;
     padding: 55px;
     text-align: center;
+    border: 2px solid #709d91;
+    border-radius: 5px;
+}
+
+#home-navbar {
+    font-family: 'Bebas Neue', sans-serif;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-navbar a {
+    display: block;
+    padding: 10px;
+    margin: 0 10px;
+    color: #709d91;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #709d91;
+    border-radius: 5px;
+}
+
+#home-navbar a:hover {
+    color: #fff;
+    background-color: #333;
 }
 
 section {
