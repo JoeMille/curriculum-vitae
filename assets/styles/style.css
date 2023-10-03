@@ -126,6 +126,16 @@ body {
     text-align: left;
   }
 
+.example-h3 {
+    font-family: 'bebas neue', sans-serif;
+    font-size: 30px;
+    color: #709d91;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+
+}
+
 /* Styling for the images on lower Index page */
 .image-container {
     display: flex;
