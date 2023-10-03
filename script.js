@@ -16,6 +16,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+// code for progress bars
 const progressValues = [80, 60, 40, 20];
 const progressBars = document.querySelectorAll('.graph-progress');
 
