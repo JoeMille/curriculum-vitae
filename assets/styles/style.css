@@ -48,28 +48,72 @@ body {
     background-color: #333;
 }
 
-section {
-    display: grid;
-    place-items: center;
-    min-height: 45vh;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    background-color: #4e4646;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
     transition: all 1s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
-
+    transition: all 1s;
 }
 
-@media(prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
     .hidden {
         transition: none;
     }
 }
+
+.graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  
+  .graph-bar {
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .graph-progress {
+    height: 20px;
+    background-color: #709d91;
+    border-radius: 5px;
+  }
+  
+  .graph-label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  

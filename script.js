@@ -1,3 +1,5 @@
+// code for home page content container
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
@@ -11,6 +13,12 @@ const observer = new IntersectionObserver((entries) => {
 
 });
 
-
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+const progressValues = [80, 60, 40, 20];
+const progressBars = document.querySelectorAll('.graph-progress');
+
+progressBars.forEach((bar, index) => {
+  bar.style.width = `${progressValues[index]}%`;
+});
