@@ -107,6 +107,11 @@ body {
     max-width: 1200px; /* add max-width to prevent the containers from stretching too far */
     margin: 0 auto; /* center the container */
   }
+
+  .card-h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+  }
   
   .card {
     background-color: #4e4646;
@@ -136,9 +141,6 @@ body {
     transition: all 1s;
   }
 
-  .card-h1 {
-    font-family: 'Press Start 2P', cursive;   
-  }
   
   @media (prefers-reduced-motion) {
     .hidden {
