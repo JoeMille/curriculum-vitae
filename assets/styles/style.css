@@ -244,14 +244,20 @@ body {
 
 /* Styling for the contact form on contact page */
 
-.contact-container {
+.contact-form-section {
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-container {
     background-image: url(/assets/images/cv-background-image.png);
-    width: 50%;
+    width: 40%;
     margin: 20px auto;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    float: left;
   }
   
   #contact-form {
@@ -261,7 +267,7 @@ body {
   }
   
   label {
-    font-family: 'Press Start 2P', cursive;    
+    font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     margin-bottom: 0.5rem;
   }
@@ -286,7 +292,7 @@ body {
     border: none;
     border-radius: 4px;
     padding: 0.5rem 1rem;
-    font-family: 'Press Start 2P', cursive;    
+    font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     cursor: pointer;
   }
