@@ -300,3 +300,10 @@ body {
   button[type="submit"]:hover {
     background-color: #acc8e6;
   }
+
+  .contact-form-header {
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  
