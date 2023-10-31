@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 // code for home page content container
 
 const observer = new IntersectionObserver((entries) => {
@@ -29,18 +29,18 @@ progressBars.forEach((bar, index) => {
 // ADD EMAIL DETAILS ONCE PROJECT COMPLETED
 
 const sendEmail = (name, company, email, message) => {
-    email.send({
-      Host: "smtp.gmail.com",
-      Username: "your-email-address", // Replace with your own email address
-      Password: "your-email-password", // Replace with your own email password
-      To: "your-email-address@example.com", // Replace with your own email address
-      From: "your-email-address@gmail.com", // Replace with your own email address
-      Subject: "New message from contact form",
-      Body: `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nMessage: ${message}`,
-    }).then((message) => {
-      alert("Thank you for your message!");
-    });
-  };
+  email.send({
+    Host: process.env.EMAIL_HOST,
+    Username: process.env.EMAIL_USERNAME,
+    Password: process.env.EMAIL_PASSWORD,
+    To: process.env.EMAIL_TO,
+    From: process.env.EMAIL_FROM,
+    Subject: "New message from contact form",
+    Body: `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nMessage: ${message}`,
+  }).then((message) => {
+    alert("Thank you for your message!");
+  });
+};
   
   const contactForm = document.getElementById("contact-form");
   contactForm.addEventListener("submit", (event) => {
