@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 // code for home page content container
 
 const observer = new IntersectionObserver((entries) => {
