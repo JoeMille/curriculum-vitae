@@ -53,3 +53,15 @@ const sendEmail = (name, company, email, message) => {
     contactForm.reset();
   });
 
+// code for carousel
+
+  $(document).ready(function() {
+    setInterval(function() {
+      var $active = $('#carousel img.active');
+      var $next = $active.next('img').length ? $active.next('img') : $('#carousel img:first');
+      $active.fadeOut(function() {
+        $active.removeClass('active');
+        $next.fadeIn().addClass('active');
+      });
+    }, 3000); // Change image every 3 seconds
+  });

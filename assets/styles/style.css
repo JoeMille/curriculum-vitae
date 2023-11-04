@@ -306,4 +306,15 @@ body {
     padding-top: 25px;
   }
 
+  /* Styling for the image carousel */
+  #carousel img {
+    display: none;
+    width: 300px;
+    height: 200px;
+    border: #fbfcfd 5px solid;
+  }
   
+  #carousel img.active {
+    display: block;
+
+  }
