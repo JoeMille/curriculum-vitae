@@ -1,3 +1,8 @@
+// code for particles
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});
+
 
 // code for home page content container
 
@@ -65,3 +70,4 @@ const sendEmail = (name, company, email, message) => {
       });
     }, 3000); // Change image every 3 seconds
   });
+

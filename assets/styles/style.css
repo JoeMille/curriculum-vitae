@@ -4,12 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
 body {
-    background-image: url(../images/cv-background-image2.png);
-    background-color: #333;
+    /* background-image: url(../images/cv-background-image2.png); */
+    background-color: #0d0b0b;
     color: #ffffff;
     font-family: 'Bebas Neue', sans-serif;
     padding: 0;
     margin: 0;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* This will put the particles behind your other content */
+  background-size: cover;
 }
 
 #main-header {
@@ -318,9 +328,3 @@ body {
     display: block;
   }
 
-  #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100px; /* Adjust as needed */
-    z-index: -1; /* Optional: Use this to place the particles behind other content */
-  }
