@@ -321,7 +321,8 @@ body {
     display: none;
     width: 480px;
     height: 250px;
-    border: #fbfcfd 5px solid;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
   #carousel img.active {
