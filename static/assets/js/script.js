@@ -1,10 +1,9 @@
 
 
 // code for particles.js background(script linked from particles.json file)
-particlesJS.load('particles-js', 'particles.json', function() {
+particlesJS.load('particles-js', particlesJsonUrl, function() {
   console.log('particles.js loaded - callback');
 });
-
 
 // code for home page content container
 
