@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
-    <title>Meditation App</title>
+    <link rel="stylesheet" href="static/assets/styles/style.css" />
+    <title>Junior Dev Resume</title></title>
     <!--Bootstrap CDN----->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <!--Font Awesome CDN-->
@@ -13,6 +13,68 @@
   </head>
 <body>
 
+<!--Header with name and navigation bar-->
 
+    <header id="main-header">
+        <h1>JOE M SOFTWARE DEVELOPMENT</h1>
+        <nav id="home-navbar">
+        <a href="{{ url_for('projects') }}">Projects</a>
+      </nav>
+    </header>
+
+<!--Particles.js-->
+
+<div id="particles-js"></div>
+
+<section class="projects-introduction">
+  <h1>Projects</h1>
+  <p>Here are some of the projects I have worked on. 
+    Click on the project to view more details.</p>
+</section>
+
+
+<section class="projects-container">
+  <div class="coastal-chef-projects">
+    <img src="{{ url_for('static', filename='assets/images/coastal-chef-screenshot.png') }}" alt="project1">
+    <h2>The Coastal Chef Project</h2>
+    <p>This project was built as a page for a recruitment company based in the South of England. 
+      Having been a client for multiple Hospitality Staffing agencies for large restaurants and Hotels, the idea 
+      for the project was to create a page that quickly communicated it's intent and services without want for further 
+      explanation, employing a simple yet appealing UI.</p>
+  </div>
+  <div class="penny-miller-author-projects">
+    <img src="{{ url_for('static', filename='assets/images/penny-miller-site.png') }}" alt="project2">
+    <h2>Penny Miller Author</h2>
+    <p>This e-commerce site was created for acclaimed canine behaviourist Penny Miller. It is built
+      using pyhton Django for the back end and database management and HTML/CSS for the front end. 
+      The site is fully responsive and has a user-friendly interface for easy navigation, scoring in 
+      the top percentages for Search Engine Optimisation and Performance scores.</p>
+    </p>
+  </div>
+  <div class="full-flask-projects">
+    <img src="{{ url_for('static', filename='assets/images/flask-social-media.png') }}" alt="project3">
+    <h2>Full Flask</h2>
+    <p>Full Flask is a Flask pyhton project created as a user friendly message and posting 
+      service. The concept behind this design was primarily to create an entirely secure service, 
+      allowing users to create read update and delete their data whilst utilising flask and werkzeugs
+    powerful encryption libraries to maintain user data safety.</p>
+  </div>
+</section>
+
+
+
+<!--Jquery API-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!--Particles.js-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+<script>
+  var particlesJsonUrl = "{{ url_for('static', filename='assets/js/particles.json') }}";
+</script>
+
+<!--Js file-->
+<script src="{{ url_for('static', filename='assets/js/script.js')}}"></script>
+    
 </body>
 </html>

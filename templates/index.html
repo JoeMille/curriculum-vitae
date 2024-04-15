@@ -18,8 +18,8 @@
     <header id="main-header">
         <h1>JOE M SOFTWARE DEVELOPMENT</h1>
         <nav id="home-navbar">
-          <a href="projects.html">Projects Portfolios & Contributions...</a></li>
-        </nav>
+        <a href="{{ url_for('projects') }}">Projects</a>
+      </nav>
     </header>
 
 <!--Particles.js-->
@@ -65,6 +65,8 @@
   <!--Carousel for projects-->
 
   <div id="carousel">
+    <img src="{{ url_for('static', filename='assets/images/penny-miller-site.png') }}">
+    <img src="{{ url_for('static', filename='assets/images/flask-social-media.png') }}">
     <img src="{{ url_for('static', filename='assets/images/coastal-chef-screenshot.png') }}" class="active">
     <img src="{{ url_for('static', filename='assets/images/contact-box-ex.png') }}">
     <img src="{{ url_for('static', filename='assets/images/message-container-js.png') }}">
@@ -79,9 +81,10 @@
     <h1 class="card-h1">Assets</h1>
     <ul>
       <li>Fundamental principles and practices of UX</li>
-      <li>Front-End development, JavaScript, Python</li>
+      <li>Front-End development, JavaScript</li>
       <li>Flask, Django, Mongo DB</li>
       <li>HTML, CSS, Bootstrap, Jquery</li>
+      <li>Back end database driven development Python</li>
       <li>Responsive design</li>
       <li>Postgres, SQL</li>
       <li>Database Management </li>
@@ -117,7 +120,7 @@
     <h2>Alternatively contact direct through messenger...</h2>
   </div>
   <div class="contact-container">
-    <form id="contact-form" action="{{ url_for('send_email') }}" method="post">
+    <form id="contact-form" action="" method="post">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
   

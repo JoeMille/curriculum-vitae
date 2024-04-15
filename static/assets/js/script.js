@@ -69,6 +69,6 @@ const sendEmail = (name, company, email, message) => {
         $active.removeClass('active');
         $next.fadeIn().addClass('active');
       });
-    }, 3000); // Change image every 3 seconds
+    }, 4000); // Change image every 3 seconds
   });
 
