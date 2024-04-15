@@ -18,7 +18,7 @@
     <header id="main-header">
         <h1>JOE M SOFTWARE DEVELOPMENT</h1>
         <nav id="home-navbar">
-        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('index') }}">Home</a>
       </nav>
     </header>
 
@@ -61,7 +61,10 @@
   </div>
 </section>
 
-
+<section class="resume-section">
+  <h2>Below is a readable copy of my current resume</h2>
+  <img src="{{ url_for('static', filename='assets/images/cv-screenshot.png') }}" alt="project3">
+</section>
 
 <!--Jquery API-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
