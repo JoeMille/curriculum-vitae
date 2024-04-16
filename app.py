@@ -1,5 +1,4 @@
 import os 
-import env 
 from flask import Flask, request, render_template
 from flask_mail import Mail, Message
 
