@@ -282,14 +282,14 @@ body {
 /* Styling for the footer on Index page */
 
 .element-above-footer {
-  margin-bottom: 50px; /* add margin to create space between the element and the footer */
+  margin-bottom: 50px; 
 }
 
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px 0;
   text-align: center;
-  margin-top: 50px; /* add margin to create space between the footer and the element above it */
+  margin-top: 50px; 
 }
 
 .social-links {
@@ -342,11 +342,13 @@ footer {
 }
 
 .projects-container {
-  background-color: rgb(8, 8, 50);
+  background-color: #007bff;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: large;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); 
+  opacity: 0.9; 
 }
 
 .projects-container div {
@@ -361,17 +363,36 @@ footer {
 }
 
 .cosmic-projects {
+  background-color: #007bff;
+  padding: 10px;
   max-width: 600px;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  margin: auto;
+  margin-left: auto;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); 
+  opacity: 0.9; 
 }
 
 .cosmic-projects img {
-  width: 600px; /* Adjust this to change the size of the thumbnail */
+  width: 600px; 
   height: auto;
   object-fit: cover;
+  
+  
+}
+
+.flex-container-projects {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume-section, .contact-section {
+  width: 45%; 
+  box-sizing: border-box;
 }
 
 .resume-section {
@@ -379,11 +400,31 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .resume-section img {
   width: 70%;
-  height: 800px;
+  height: 1000px;
   object-fit: contain;
+}
+
+.contact-section {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: auto;
+  margin-top: 40px; 
+  margin-bottom: 20px;
+  padding: 20px; 
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); 
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-section h2, .contact-section h3, .contact-section p, .contact-section ul {
+  text-align: center;
 }
