@@ -42,3 +42,4 @@ typing_extensions==4.8.0
 urllib3==1.26.16
 Werkzeug==3.0.1
 yarl==1.9.2
+sendgrid==7.10.0
