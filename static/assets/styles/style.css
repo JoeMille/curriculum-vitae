@@ -23,15 +23,22 @@ body {
 }
 
 #main-header {
-    background-image: url(../images/cv-background-image.png);
-    font-family: 'Jost', sans-serif;    
-    font-size: 30PX;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid #709d91;
-    border-radius: 5px;
+  background-image: url(../images/starry-background-2.jpeg);
+  font-family: 'Jost', sans-serif;    
+  font-size: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #709d91;
+  border-radius: 5px;
+  transition: filter 2s;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 /* Styling for the home-navbar*/
 
@@ -187,7 +194,34 @@ body {
     text-align: center;
 }
 
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.resume-container img {
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
 /* Styling for the main content on contact page */
+
+.work-experience {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    background-image: url(../images/starry-background-2.jpeg); ;
+    width: 85%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); 
+}
 
 #contact-header {
     background-image: url(../images/cv-background-image.png);
@@ -199,6 +233,7 @@ body {
     text-align: center;
     border: 2px solid #709d91;
     border-radius: 5px;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); 
 }
 
   /* Styling for the image carousel */
@@ -342,7 +377,7 @@ footer {
 }
 
 .projects-container {
-  background-color: #007bff;
+  background-color: #112841;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -363,12 +398,13 @@ footer {
 }
 
 .cosmic-projects {
-  background-color: #007bff;
+  background-color: #112841;
   padding: 10px;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  margin-bottom: 45px;
   justify-content: center;
   align-items: center;
   margin: auto;

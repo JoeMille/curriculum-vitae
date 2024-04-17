@@ -5,6 +5,19 @@ particlesJS.load('particles-js', particlesJsonUrl, function() {
   console.log('particles.js loaded - callback');
 });
 
+// code for header pulsating effect
+
+// JavaScript
+// Header image pulsating effect
+const header = document.querySelector('#main-header');
+let brightness = 1;
+
+setInterval(() => {
+    brightness = brightness === 1 ? 2 : 1;
+    if (header) {
+        header.style.filter = `brightness(${brightness})`;
+    }
+}, 2000);
 // code for home page content container
 
 const observer = new IntersectionObserver((entries) => {
@@ -31,27 +44,6 @@ progressBars.forEach((bar, index) => {
 });
 
 
-// code for contact form/ routes to personal email
-// ADD EMAIL DETAILS ONCE PROJECT COMPLETED
-
-const contactForm = document.getElementById("contact-form");
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(contactForm);
-
-  fetch('/contact', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.text())
-  .then(data => alert(data))
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-
-  contactForm.reset();
-});
 
 // code for carousel
 

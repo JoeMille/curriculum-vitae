@@ -17,9 +17,6 @@
 
     <header id="main-header">
         <h1>JOE M SOFTWARE DEVELOPMENT</h1>
-        <nav id="home-navbar">
-        <a href="{{ url_for('projects') }}">Projects</a>
-      </nav>
     </header>
 
 <!--Particles.js-->
@@ -47,9 +44,6 @@
   </div>
 </div>
 
-
-
-
 <!--Containers for developer information projects and contact-->
 
 <div class="card-container">
@@ -65,6 +59,7 @@
   <!--Carousel for projects-->
 
   <div id="carousel">
+    <img src="{{ url_for('static', filename='assets/images/cosmic-screenshot.png') }}">
     <img src="{{ url_for('static', filename='assets/images/penny-miller-site.png') }}">
     <img src="{{ url_for('static', filename='assets/images/flask-social-media.png') }}">
     <img src="{{ url_for('static', filename='assets/images/coastal-chef-screenshot.png') }}" class="active">
@@ -92,30 +87,128 @@
   </div>
 </div>
 
-<!--Section for contact form-->
-<section class="contact-form-section">
-  <div class="contact-form-header">
-    <h2>Alternatively contact direct through messenger...</h2>
-  </div>
-  <div class="contact-container">
-    <form id="contact-form" action="/contact" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-  
-      <label for="company">Company:</label>
-      <input type="text" id="company" name="company">
-  
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required>
-  
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required rows="6"></textarea>
-  
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+<!--Work Experience-->
+<section class="work-experience">
+  <h2>Education</h2>
+    <h3>South Devon College, Diploma in Software and Web appDevelopment.<br>
+    Flowery Branch High School, Flowery Branch, Ga, USA<br>
+    Chef Academy of London, London, UK <br>
+    Fully up-to-date Health & Hygiene/Allergens/COSHH/HAACP Qualifications
+  </h3>
+  <p>Thank you kindly for taking the time to read. As a recent career transition 
+    prospect emerging from a background as a fine dining chef I have listed career 
+    experience relevant to my newly undertaken journey. With extensive experience 
+    in high pressure environments requiring meticulous efficiency, I hope to apply 
+    a client friendly and team orientated work ethic to prospective projects and/or 
+    organisations.
+  </p>
+                              <h1>Experience</h1>
+     <p><Feel free to browse my text CV below....</p><i class="fas fa-glasses"></i>
 </section>
 
+<div class="resume-container">
+  <img src="{{ url_for('static', filename='assets/images/cv-screenshot2.png') }}" alt="Description of image" style="width: 50%;">
+</div>
+<!--Projects section-->
+
+
+<section class="projects-introduction">
+  <h1>Projects</h1>
+  <p>Here are some of the projects I have worked on. 
+    Click on the project to view more details.</p>
+</section>
+
+
+<section class="projects-container">
+  <div class="coastal-chef-projects">
+    <img src="{{ url_for('static', filename='assets/images/coastal-chef-screenshot.png') }}" alt="project1">
+    <h2>The Coastal Chef Project</h2>
+    <p>This project was built as a page for a recruitment company based in the South of England. 
+      Having been a client for multiple Hospitality Staffing agencies for large restaurants and Hotels, the idea 
+      for the project was to create a page that quickly communicated it's intent and services without want for further 
+      explanation, employing a simple yet appealing UI.</p>
+      <p> Click <a href="https://joemille.github.io/firstproject1/">here</a> to be taken to the deployed site.... </p>
+
+  </div>
+  <div class="penny-miller-author-projects">
+    <img src="{{ url_for('static', filename='assets/images/flask-social-media.png') }}" alt="project3">
+    <h2>Penny Miller Author</h2>
+    <p>This e-commerce site was created for acclaimed canine behaviourist Penny Miller. It is built
+      using pyhton Django for the back end and database management and HTML/CSS for the front end. 
+      The site is fully responsive and has a user-friendly interface for easy navigation, scoring in 
+      the top percentages for Search Engine Optimisation and Performance scores.</p>
+      <p> Click <a href="https://penny-miller-author-page-9d9d6e6d9988.herokuapp.com/">here</a> </p>
+
+  </div>
+  <div class="full-flask-projects">
+    <img src="{{ url_for('static', filename='assets/images/penny-miller-site.png') }}" alt="project2">
+    <h2>Full Flask</h2>
+    <p>Full Flask is a Flask pyhton project created as a user friendly message and posting 
+      service. The concept behind this design was primarily to create an entirely secure service, 
+      allowing users to create read update and delete their data whilst utilising flask and werkzeugs
+    powerful encryption libraries to maintain user data safety.</p>
+    <p> Click <a href="https://chatterflask-app-eaa53a32095e.herokuapp.com/">here</a> </p>
+  </div>
+  
+
+</section>
+<div class="cosmic-projects">
+  <img src="{{ url_for('static', filename='assets/images/cosmic-screenshot.png') }}" alt="project4">
+  <h2>Cosmic Commerce</h2>
+  <p>Cosmic Commerce is a theorretical template for a futuristic 
+    science themed fuill stack django application. This project was built as end of course build,
+    which secured myself as a full stack level 5 designer. Main focuses beyong the user interface was desiging 
+    a amssisve relational database with professional level front-end design and producing a production team-scalee product 
+    as a result.</p>
+    <p> Click <a href="https://peaceful-beach-57387-0a66191160e7.herokuapp.com/">here</a> </p>
+</div>
+
+<section class="open-source-section">
+  <h3 class="example-h3">If any of the examples below can be of aid, please visit my <a href="https://github.com/JoeMille" target="_blank">GitHub</a> to connect, correct, use or improve!</h3>
+  <div class="image-container">
+    <div class="image">
+      <img src="{{ url_for('static', filename='assets/images/psswrdgenex.png') }}" alt="Image 1">
+      <p class="description">A simple password encryption program allowing user to choose generated length.</p>
+    </div>
+    <div class="image">
+      <img src="{{ url_for('static', filename='assets/images/contact-box-ex.png') }}" alt="Image 2">
+      <p class="description">A contact box enabling user input with multiple parameters</p>
+    </div>
+    <div class="image">
+      <img src="{{ url_for('static', filename='assets/images/time-js-ex.png') }}" alt="Image 3">
+      <p class="description">A timer function written in Javascript able to act for a multitude of functions</p>
+    </div>
+</div>
+    
+</section>
+
+<div class="flex-container-projects">
+  <article class="contact-section">
+    <header>
+      <h2>Thank you kindly for exploring my brief portfolio page</h2>
+    </header>
+    <p>If you would like to view any of the projects in their raw forms, please visit my <a href="https://github.com/JoeMille">GitHub</a> to view the repositories.</p>
+    <p> For development quotes, collaboration or simply to learn more about any projects I'm involved with please use the contact info below</p>
+    <p> For references and formal resume please use one (or many) of the listed contact methods below. </p>
+    <section class="projects-contact-info">
+      <h3>Contact Information</h3>
+      <ul>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <span>Email: jomillah92@icloud.com</span>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i>
+          <span>Phone: (+44)07951069337</span>
+        </li>
+        <li>
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/JoeMille">GitHub: JoeMille</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</div>
 
 <!--Footer with social links-->
 
