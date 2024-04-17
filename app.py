@@ -1,20 +1,12 @@
 import os 
 from dotenv import load_dotenv
 from flask import Flask, request, render_template
-from flask_mail import Mail, Message
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 load_dotenv()
 
 app = Flask(__name__)
-
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'chefjoemiller1992@gmail.com'
-app.config['MAIL_PASSWORD'] = 'your-password'
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
-
-mail = Mail(app)
 
 @app.route('/')
 def index():
@@ -31,15 +23,22 @@ def contact():
     email = request.form.get('email')
     message_body = request.form.get('message')
 
-    msg = Message(
-        'New contact form submission',
-        sender='chefjoemiller1992@gmail.com',
-        recipients=['chefjoemiller1992@gmail.com']
-    )
-    msg.body = f'From: {name}\nCompany: {company}\nEmail: {email}\n\n{message_body}'
-    mail.send(msg)
+    print(f'Form data: {name}, {company}, {email}, {message_body}')
 
-    return 'Form submitted'
+    message = Mail(
+        from_email='chefjoemiller1992@gmail.com',
+        to_emails='chefjoemiller1992@gmail.com',
+        subject='New contact form submission',
+        html_content=f'From: {name}<br>Company: {company}<br>Email: {email}<br><br>{message_body}'
+    )
+    try:
+        sg = SendGridAPIClient(os.getenv('SENDGRID_API_KEY'))
+        response = sg.send(message)
+        print(f'SendGrid response: {response.status_code}, {response.body}')
+        return 'Form submitted'
+    except Exception as e:
+        print(f'Error: {e}')
+        return str(e)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
