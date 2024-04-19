@@ -36,7 +36,7 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // code for progress bars
-const progressValues = [80, 60, 40, 20];
+const progressValues = [80, 60, 50, 40];
 const progressBars = document.querySelectorAll('.graph-progress');
 
 progressBars.forEach((bar, index) => {
@@ -55,7 +55,7 @@ progressBars.forEach((bar, index) => {
         $active.removeClass('active');
         $next.fadeIn().addClass('active');
       });
-    }, 4000); // Change image every 3 seconds
+    }, 4000); // Change image every 4 seconds
   });
 
 // code for second carousel //////////////////////////////////////////////////////////////////////
@@ -87,4 +87,4 @@ setInterval(() => {
     // If there's no next slide, move to the first slide
     moveToSlide(track, currentSlide, slides[0]);
   }
-}, 3000);
+}, 5000);
