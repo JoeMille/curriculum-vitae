@@ -58,3 +58,33 @@ progressBars.forEach((bar, index) => {
     }, 4000); // Change image every 3 seconds
   });
 
+// code for second carousel //////////////////////////////////////////////////////////////////////
+let track = document.querySelector('.carousel-track');
+let slides = Array.from(track.children);
+let slideWidth = slides[0].getBoundingClientRect().width;
+
+// Arrange slides next to each other
+slides.forEach((slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+});
+
+let currentIndex = 0;
+
+function moveToSlide(track, currentSlide, targetSlide) {
+  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+  currentSlide.classList.remove('current-slide');
+  targetSlide.classList.add('current-slide');
+}
+
+// Move to the next slide every 3 seconds
+setInterval(() => {
+  let currentSlide = track.querySelector('.current-slide');
+  let nextSlide = currentSlide.nextElementSibling;
+  
+  if (nextSlide) {
+    moveToSlide(track, currentSlide, nextSlide);
+  } else {
+    // If there's no next slide, move to the first slide
+    moveToSlide(track, currentSlide, slides[0]);
+  }
+}, 3000);
