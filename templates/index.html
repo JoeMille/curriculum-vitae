@@ -49,10 +49,10 @@
 <div class="card-container">
   <div class="card hidden">
     <h1 class="card-h1">About...</h1>
-    <p>A junior software developer with a background in hospitality transitioning fully into the IT industry, 
-      bringing a set of transferable skills and aptitudes. My experience as a chef and student has cultivated precision, 
-      attention to detail, creative problem-solving, and the ability to thrive under pressure—qualities that 
-      seamlessly translate into the world of software development.
+    <p>Junior Software Developer with a Diploma in Full stack Software Development 
+      from the Code Institute and South Devon College. Proficient in HTML, CSS, Javascript, Python. 
+      I have over a decades experience in Customer Service and hospitality. A valuable team-player
+       with strong communication skills and effective problem solving abilities. 
     </p>
   </div>
 
@@ -63,10 +63,10 @@
     <img src="{{ url_for('static', filename='assets/images/penny-miller-site.png') }}">
     <img src="{{ url_for('static', filename='assets/images/flask-social-media.png') }}">
     <img src="{{ url_for('static', filename='assets/images/coastal-chef-screenshot.png') }}" class="active">
-    <img src="{{ url_for('static', filename='assets/images/contact-box-ex.png') }}">
+    <img src="{{ url_for('static', filename='assets/images/sqlite3-code.png') }}">
     <img src="{{ url_for('static', filename='assets/images/message-container-js.png') }}">
     <img src="{{ url_for('static', filename='assets/images/head-set-screenshot.png') }}" alt="">
-    <img src="{{ url_for('static', filename='assets/images/psswrdgenex.png') }}">
+    <img src="{{ url_for('static', filename='assets/images/sql3-render.png') }}">
     <img src="{{ url_for('static', filename='assets/images/time-js-ex.png') }}">
   </div>
 
@@ -76,13 +76,13 @@
     <h1 class="card-h1">Assets</h1>
     <ul>
       <li>Fundamental principles and practices of UX</li>
-      <li>Front-End development, JavaScript</li>
-      <li>Flask, Django, Mongo DB</li>
+      <li>Front-End development, Back-End development and design</li>
+      <li>Flask, Django, Node.js</li>
       <li>HTML, CSS, Bootstrap, Jquery</li>
       <li>Back end database driven development Python</li>
       <li>Responsive design</li>
-      <li>Postgres, SQL</li>
-      <li>Database Management </li>
+      <li>Postgres, SQL, SQlite3, Mongodb</li>
+      <li>Database Management</li>
     </ul>
   </div>
 </div>
@@ -106,9 +106,13 @@
                 <img class="carousel__image" src="{{ url_for('static', filename='assets/images/penny-m2.png') }}" alt="Image 1">
               </li>
               <li class="carousel__slide">
-                <img class="carousel__image" src="{{ url_for('static', filename='assets/images/penny-m3.png') }}" alt="Image 1">              </li>
+                <img class="carousel__image" src="{{ url_for('static', filename='assets/images/penny-m3.png') }}" alt="Image 1">              
+              </li>
               <li class="carousel__slide">
-                <img class="carousel__image" src="{{ url_for('static', filename='assets/images/coastal-chef2.png') }}" alt="Image 1">              </li>
+                <img class="carousel__image" src="{{ url_for('static', filename='assets/images/coastal-chef2.png') }}" alt="Image 1">              
+              </li>
+                
+                    
               <!-- Add more images as needed -->
           </ul>
       </div>
@@ -177,20 +181,40 @@
     powerful encryption libraries to maintain user data safety.</p>
     <p> Click <a href="https://chatterflask-app-eaa53a32095e.herokuapp.com/">here</a> </p>
   </div>
-  
+  <div class="cosmic-projects">
+    <img src="{{ url_for('static', filename='assets/images/cosmic-screenshot.png') }}" alt="project4">
+    <h2>Cosmic Commerce</h2>
+    <p>Cosmic Commerce is a theorretical template for a futuristic 
+      science themed fuill stack django application. This project was built as end of course build,
+      which secured myself as a full stack level 5 designer. Main focuses beyong the user interface was desiging 
+      a amssisve relational database with professional level front-end design and producing a production team-scalee product 
+      as a result.</p>
+      <p> Click <a href="https://peaceful-beach-57387-0a66191160e7.herokuapp.com/">here</a> </p>
+  </div>
 
 </section>
-<div class="cosmic-projects">
-  <img src="{{ url_for('static', filename='assets/images/cosmic-screenshot.png') }}" alt="project4">
-  <h2>Cosmic Commerce</h2>
-  <p>Cosmic Commerce is a theorretical template for a futuristic 
-    science themed fuill stack django application. This project was built as end of course build,
-    which secured myself as a full stack level 5 designer. Main focuses beyong the user interface was desiging 
-    a amssisve relational database with professional level front-end design and producing a production team-scalee product 
-    as a result.</p>
-    <p> Click <a href="https://peaceful-beach-57387-0a66191160e7.herokuapp.com/">here</a> </p>
-</div>
 
+<section class="projects-container2">
+  <div class="sqlite3-projects">
+    <img src="{{ url_for('static', filename='assets/images/sql3-render.png') }}" alt="project5">
+    <h2>Sqlite3 Database</hh2>
+    <p>This database tool is a fully amendable project for database manipulation using raw SQL queries. 
+      The project was created as a tool for database management and manipulation, allowing users to create, 
+      read, update and delete data from a database using a simple user interface.</p>
+      <p> Click <a href="https://github.com/JoeMille/django-2">here</a> </p>
+  </div>
+  <div class="head-set-project">
+    <img src="{{ url_for('static', filename='assets/images/meditation-timer-screenshot.png') }}" alt="project5">
+    <h2>Head Set</hh2>
+    <p>This project acts as a simple meditation timer which when activated provides a comforting background sound 
+      and a visual aid to concentrate on in the form of messages displayed to the user. The goals of this free online tool 
+      are; replacing the need for a paid meditation app, these are costly and provide the same basic service.
+      Find content on each section of the site easy to navigate and quick to understand.</p>
+      <p> Click <a href="https://github.com/JoeMille/meditation-app-">here</a> </p>
+  </div>
+</section>
+
+<!--Open source section-->
 <section class="open-source-section">
   <h3 class="example-h3">If any of the examples below can be of aid, please visit my <a href="https://github.com/JoeMille" target="_blank">GitHub</a> to connect, correct, use or improve!</h3>
   <div class="image-container">
@@ -205,6 +229,10 @@
     <div class="image">
       <img src="{{ url_for('static', filename='assets/images/time-js-ex.png') }}" alt="Image 3">
       <p class="description">A timer function written in Javascript able to act for a multitude of functions</p>
+    </div>
+    <div class="image">
+      <img src="{{ url_for('static', filename='assets/images/sqlite3-code.png') }}" alt="Image 4">
+      <p class="description">An amendable sqlite3 datbase input application for database management</p>
     </div>
 </div>
     
