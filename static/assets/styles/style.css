@@ -217,12 +217,25 @@ body::after {
   100% { transform: translateX(-100%); }
 }
 
+
 /* Styling for the images on lower Index page */
+.open-source-section {
+  margin-top: 30px;
+}
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 20px;
+    margin-bottom: 30px;
+}
+
+.image-container div {
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+    text-align: center;
+
 }
 
 .image {

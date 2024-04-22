@@ -49,20 +49,23 @@
 <div class="card-container">
   <div class="card hidden">
     <h1 class="card-h1">About...</h1>
-    <p>Junior Software Developer with a Diploma in Full stack Software Development 
-      from the Code Institute and South Devon College. Proficient in HTML, CSS, Javascript, Python. 
-      I have over a decades experience in Customer Service and hospitality. A valuable team-player
-       with strong communication skills and effective problem solving abilities. 
+    <p>Highly motivated Junior Software Developer with a Diploma in Full Stack Development from South Devon College. Skilled in front-end technologies (HTML, CSS, Javascript) and 
+      back-end development (Python).  Leveraging over 10 years of experience in customer service and hospitality to bring exceptional 
+      communication and problem-solving skills to collaborative development teams.  Particularly interested in back-end database 
+      management and the challenges of handling large datasets, as well as the creative problem-solving opportunities of front-end
+      development.  Passionate about creating user-friendly, responsive web and offline applications that are both visually appealing and
+      useful.
     </p>
   </div>
 
   <!--Carousel for projects-->
 
   <div id="carousel">
+    <img src="{{ url_for('static', filename='assets/images/offline-checker.png') }}" class="active">
     <img src="{{ url_for('static', filename='assets/images/cosmic-screenshot.png') }}">
     <img src="{{ url_for('static', filename='assets/images/penny-miller-site.png') }}">
     <img src="{{ url_for('static', filename='assets/images/flask-social-media.png') }}">
-    <img src="{{ url_for('static', filename='assets/images/coastal-chef-screenshot.png') }}" class="active">
+    <img src="{{ url_for('static', filename='assets/images/coastal-chef-screenshot.png') }}">
     <img src="{{ url_for('static', filename='assets/images/sqlite3-code.png') }}">
     <img src="{{ url_for('static', filename='assets/images/message-container-js.png') }}">
     <img src="{{ url_for('static', filename='assets/images/head-set-screenshot.png') }}" alt="">
@@ -146,10 +149,7 @@
 
 <section class="projects-introduction">
   <h1>Projects</h1>
-  <p>Here are some of the projects I have worked on. 
-    Click on the project to view more details.</p>
 </section>
-
 
 <section class="projects-container">
   <div class="coastal-chef-projects">
@@ -216,32 +216,31 @@
 
 <!--Open source section-->
 <section class="open-source-section">
-  <h3 class="example-h3">If any of the examples below can be of aid, please visit my <a href="https://github.com/JoeMille" target="_blank">GitHub</a> to connect, correct, use or improve!</h3>
+  <h3 class="example-h3">If any of my shorter form projects can be of help please feel free to visit my <a href="https://github.com/JoeMille" target="_blank">GitHub</a> to connect, collab, use or improve!</h3>
   <div class="image-container">
     <div class="image">
       <img src="{{ url_for('static', filename='assets/images/psswrdgenex.png') }}" alt="Image 1">
       <p class="description">A simple password encryption program allowing user to choose generated length.</p>
     </div>
     <div class="image">
-      <img src="{{ url_for('static', filename='assets/images/contact-box-ex.png') }}" alt="Image 2">
-      <p class="description">A contact box enabling user input with multiple parameters</p>
-    </div>
-    <div class="image">
       <img src="{{ url_for('static', filename='assets/images/time-js-ex.png') }}" alt="Image 3">
-      <p class="description">A timer function written in Javascript able to act for a multitude of functions</p>
+      <p class="description">A customisable timer function written in Javascript able to act for a multitude of purposes</p>
     </div>
     <div class="image">
       <img src="{{ url_for('static', filename='assets/images/sqlite3-code.png') }}" alt="Image 4">
       <p class="description">An amendable sqlite3 datbase input application for database management</p>
     </div>
+    <div class="image">
+      <img src="{{ url_for('static', filename='assets/images/offline-checker.png') }}" alt="Image 4">
+      <p class="description">An offline python/SQL password strength checker</p>
+    </div>
 </div>
-    
 </section>
 
 <div class="flex-container-projects">
   <article class="contact-section">
     <header>
-      <h2>Thank you kindly for exploring my brief portfolio page</h2>
+      <h2>Thank you kindly for exploring my portfolio page</h2>
     </header>
     <p>If you would like to view any of the projects in their raw forms, please visit my <a href="https://github.com/JoeMille">GitHub</a> to view the repositories.</p>
     <p> For development quotes, collaboration or simply to learn more about any projects I'm involved with please use the contact info below</p>
