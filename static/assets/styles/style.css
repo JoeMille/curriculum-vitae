@@ -57,27 +57,28 @@ body::after {
 }
 /* Styling for the home-navbar*/
 
-#home-navbar {
+.home-navbar {
     font-family: 'Bebas Neue', sans-serif;
-    padding-top: 5px;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-#home-navbar a {
+.home-navbar a {
     display: block;
     padding: 10px;
-    margin: 0 10px;
+    margin: 20px;
     color: #709d91;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     border: 2px solid #709d91;
     border-radius: 5px;
+    font-size: 30px;
 }
 
-#home-navbar a:hover {
+.home-navbar a:hover {
     color: #fff;
     background-color: #333;
 }
@@ -375,6 +376,7 @@ footer {
   text-align: center;
   margin: 0;
   padding: 10px;
+  opacity: 0.9;
 }
 
 .projects-container {
