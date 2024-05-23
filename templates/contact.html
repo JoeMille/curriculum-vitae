@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="static/assets/styles/style.css" />
+    <title>Junior Dev Resume</title></title>
+    <!--Bootstrap CDN----->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+<body>
+
+<!--Header with name and navigation bar-->
+
+    <header id="main-header">
+        <h1>JOE M SOFTWARE DEVELOPMENT</h1>
+    </header>
+
+<!--Particles.js-->
+
+<div id="particles-js"></div>
+
+<section class="home-navbar">
+    <nav>
+      <a href="{{ url_for('index') }}">HOMEPAGE...</a>
+      <a href="{{ url_for('projects')}}">PROJECTS...</a>
+    </nav>
+  </section>
+
+  
+<div class="flex-container-projects">
+    <article class="contact-section">
+      <header>
+        <h2>Thank you kindly for exploring my portfolio page</h2>
+      </header>
+      <p>If you would like to view any of the projects in their raw forms, please visit my <a href="https://github.com/JoeMille">GitHub</a> to view the repositories.</p>
+      <p> For development quotes, collaboration or simply to learn more about any projects I'm involved with please use the contact info below</p>
+      <p> For references and formal resume please use any of the listed contact methods below. </p>
+      <section class="projects-contact-info">
+        <h3>Contact Information</h3>
+        <ul>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span>Email: jomillah92@icloud.com</span>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <span>Phone: (+44)07951069337</span>
+          </li>
+          <li>
+            <i class="fa fa-github"></i>
+            <a href="https://github.com/JoeMille">GitHub: JoeMille</a>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </div>
+  
+
+<!--Footer with social links-->
+
+<footer>
+  <ul class="social-links">
+    <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="https://github.com/JoeMille/curriculum-vitae"><i class="fab fa-github"></i></a></li>
+  </ul>
+</footer>
+
+
+<!--Jquery API-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!--Particles.js-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+<script>
+  var particlesJsonUrl = "{{ url_for('static', filename='assets/js/particles.json') }}";
+</script>
+
+<!--Js file-->
+<script src="{{ url_for('static', filename='assets/js/script.js')}}"></script>
+    
+</body>
+</html>
